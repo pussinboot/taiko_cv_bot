@@ -1,0 +1,22 @@
+big-picture idea
+
+train on ds version, play on wii(u)
+
+---------training---------
+	cv - use scfh + opencv to read from desmume
+	input - can step through emulation frame by frame
+	output - win32api to send keystrokes.. look into fake joypad
+
+q-learning
+	see: https://github.com/chncyhn/flappybird-qlearning-bot
+	and https://github.com/SarvagyaVaish/FlappyBirdRL
+
+discretize gameplay space by incoming drums
+read score / recognize mess up graphic as reinforcement
+	
+----------testing----------
+	cv - hdmi capture card + opencv
+	output - communicate via serial to arduino as a fake classic controller (see wiibrew for pinout)
+
+may have to move around inputs to look at different parts/ work with frameskips
+hookup outputs idno
