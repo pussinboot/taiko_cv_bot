@@ -1,3 +1,9 @@
+collect data
+	need all numbers to recognize score
+	missing drumroll (when you gotta hit it 10 times before continuing)
+
+==========================
+
 big-picture idea
 
 train on ds version, play on wii(u)
@@ -13,6 +19,8 @@ q-learning
 
 discretize gameplay space by incoming drums
 read score / recognize mess up graphic as reinforcement
+
+compare to a hand-coded recognition -> action bot as baseline?
 	
 ----------testing----------
 	cv - hdmi capture card + opencv
