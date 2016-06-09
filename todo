@@ -19,6 +19,15 @@ q-learning
 
 discretize gameplay space by incoming drums
 read score / recognize mess up graphic as reinforcement
+>>> will prob do first
+	either do diff to find closest match to char (as in http://arnab.org/blog/so-i-suck-24-automating-card-games-using-opencv-and-python)
+		- or - 
+	train a Knearest model (as in https://github.com/hasegaw/IkaLog/blob/master/ikalog/utils/character_recoginizer/character.py
+							and https://github.com/hasegaw/IkaLog/blob/master/ikalog/utils/character_recoginizer/number.py)
+
+	numbers r 12x16 pixels each
+	see masks folder
+
 
 compare to a hand-coded recognition -> action bot as baseline?
 	
