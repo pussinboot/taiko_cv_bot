@@ -1,6 +1,8 @@
-collect data
-	need all numbers to recognize score
-	missing drumroll (when you gotta hit it 10 times before continuing)
+WHAT's NEXT
+
+implement no check to see if it works real-time
+get messup check to work too
+start working on discretizing the play-area
 
 ==========================
 
@@ -21,6 +23,8 @@ discretize gameplay space by incoming drums
 read score / recognize mess up graphic as reinforcement
 >>> will prob do first
 	either do diff to find closest match to char (as in http://arnab.org/blog/so-i-suck-24-automating-card-games-using-opencv-and-python)
+
+	- remember that extracted nos have green where should be ignored :_)
 		- or - 
 	train a Knearest model (as in https://github.com/hasegaw/IkaLog/blob/master/ikalog/utils/character_recoginizer/character.py
 							and https://github.com/hasegaw/IkaLog/blob/master/ikalog/utils/character_recoginizer/number.py)
