@@ -1,9 +1,6 @@
 WHAT's NEXT
 
-implement no check to see if it works real-time
-	done, it does work quick enough but need to iron out kinks make it resistant to wrong decisions :/
-	combination of lowering threshold and knowing that score shouldnt change so much between frames
-get messup check to work too
+get messup check to work too - almost done
 start working on discretizing the play-area
 
 ==========================
