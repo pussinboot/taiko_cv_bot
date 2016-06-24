@@ -10,7 +10,7 @@ class Recognizer:
 			self.no_imgs[i] = self.clean_img(io.imread(filename)[:,:,:3])
 		self.messup_img =  self.clean_img(io.imread(path_to_files+'/messup.png')[35:67,101:153,:3])
 
-		self.no_thresh = 50
+		self.no_thresh = 60
 		self.messup_thresh = 60
 
 		self.reset()
@@ -46,8 +46,6 @@ class Recognizer:
 		if debug: return tor
 		if tor  < self.last_score:
 			tor = self.last_score
-		else:
-			self.last_score = tor
 		return tor
 
 	def messup_test(self,img_to_test):
@@ -59,17 +57,15 @@ class Recognizer:
 				return True
 		return False
 
-	def messup_tester(self,img_to_test, thresh=-1):
+	def messup_tester(self,img_to_test, thresh=-1,debug=False):
 		if thresh < 0: thresh = self.no_thresh
 		res = np.mean(cv2.absdiff(img_to_test,self.messup_img))
-		return res < thresh:
+		if debug: return res
+		return res < thresh
 
 	def test_frame(self,frame):
 		score = self.no_test(frame[52:68,-94:-10,:])
-		messup = messup_test(frame[35:67,101:153,:])
-		return {'score':score,'messup':messup}
-
-
-
-
-
+		delta_score = score - self.last_score # remember score is strictly increasing))
+		self.last_score = score
+		messup = self.messup_test(frame[35:67,101:153,:])
+		return {'score':score,'delta_score':delta_score,'messup':messup}
