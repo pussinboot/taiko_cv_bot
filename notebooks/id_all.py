@@ -89,7 +89,7 @@ class Gob_Signal:
 	def test(self,img_to_test):
 		# tests if gob JUST got detected, flips off when no longer detected
 		test_res = np.mean(cv2.absdiff(img_to_test,self.img))
-		res = test_res - thresh
+		res = test_res - self.thresh
 		if not self.last_on:
 			if res < 0:
 				self.last_on = True
