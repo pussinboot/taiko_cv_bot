@@ -77,7 +77,7 @@ class Recognizer:
 		messup = self.messup_test(frame[35:67,101:153,:])
 		tor =  {'score':score,'delta_score':delta_score,'messup':messup}
 		for n in self.gob_names:
-			tor[n] = self.gob[n].test(frame[50:75,15:45,:3])
+			tor[n] = self.gobs[n].test(frame[50:75,15:45,:3])
 		return tor
 
 class Gob_Signal:
