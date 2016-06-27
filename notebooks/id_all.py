@@ -24,7 +24,7 @@ class Recognizer:
 	def reset(self):
 		self.last_score = 0
 		self.messed_up = False
-		for k,v in self.gob_names.items():
+		for k,v in self.gobs.items():
 			v.last_on = False
 
 	def clean_img(self,img_to_clean):
