@@ -1,12 +1,20 @@
 WHAT's NEXT
 
-start working on discretizing the play-area
+DONE
+	start working on discretizing the play-area
+		r,g,b are 0-7
+still to do
+	discretize output space and develop interface
 
 ==========================
 
 big-picture idea
 
 train on ds version, play on wii(u)
+the state space will be discretized
+	by the average color in a vertical column of the music bar
+		not sure where along the bar i need to take the average, so will compare several different x-values, although it probably wont matter : )
+
 
 ---------training---------
 	cv - use scfh + opencv to read from desmume
